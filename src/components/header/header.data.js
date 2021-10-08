@@ -1,27 +1,22 @@
 export default [
   {
-    path: 'banner',
-    label: 'Home',
+    path: "banner",
+    label: "ホーム",
     offset: -30,
   },
   {
-    path: 'features',
-    label: 'Features',
+    path: "features",
+    label: "主な機能",
     offset: 0,
   },
   {
-    path: 'services',
-    label: 'Services',
-    offset: -40,
-  },
-  {
-    path: 'pricing',
-    label: 'Pricing',
+    path: "pricing",
+    label: "プラン",
     offset: -70,
   },
   {
-    path: 'support',
-    label: 'Support',
+    path: "support",
+    label: "サポート",
     offset: -70,
   },
 ];
