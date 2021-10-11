@@ -11,7 +11,7 @@ export default function Footer() {
         variant: 'layout.footer',
       }}
     >
-      <Container
+      {/* <Container
         sx={{
           variant: 'layout.toolbar',
           alignItems: 'stretch',
@@ -41,7 +41,7 @@ export default function Footer() {
             ))}
           </Box>
         ))}
-      </Container>
+      </Container> */}
       <Container
         sx={{
           variant: 'layout.toolbar',
@@ -50,14 +50,11 @@ export default function Footer() {
         }}
       >
         <Logo />
-        <Text sx={styles.copyright}>
-          &copy; Copyright by {new Date().getFullYear()} RedQ, Inc
-        </Text>
+        <Text sx={styles.copyright}>&copy; Copyright by {new Date().getFullYear()} Bread Labs</Text>
         <Box sx={styles.bottomMenu}>
           <Link path="/" label="Home" />
-          <Link path="/" label="Advertise" />
-          <Link path="/" label="Supports" />
-          <Link path="/" label="Marketing" />
+          <Link path="/" label="Terms" />
+          <Link path="/" label="Privacy" />
           <Link path="/" label="FAQ" />
         </Box>
       </Container>
