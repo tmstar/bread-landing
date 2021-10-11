@@ -12,33 +12,27 @@ const FAQ_TWO_DATA = {
     {
       status: false,
       title: 'Which domain should I purchase?',
-      text:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
+      text: "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
     },
     {
       status: true,
       title: 'What are some tips when choosing a name?',
-      text:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
+      text: "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
     },
     {
       status: false,
       title: 'What if I need help choosing the right domain?',
-      text:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
+      text: "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
     },
     {
       status: false,
-      title:
-        'Can I upgrade or downgrade my web hosting \n subscription system?',
-      text:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
+      title: 'Can I upgrade or downgrade my web hosting \n subscription system?',
+      text: "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
     },
     {
       status: false,
       title: 'Learn from community on Brandwagon',
-      text:
-        "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
+      text: "We make it easy to move to CometNine. Simply contact us and we'll move your hosting account from any other provider, regardless of the control panel. If at anytime your website is down for more than 0.1% result with proper investigation experiments.",
     },
   ],
   button: {
@@ -52,11 +46,7 @@ const FaqItem = ({ title, text, status, index }) => {
     setActive(!active);
   };
   return (
-    <Box
-      sx={styles.item}
-      className={`${active === true ? 'active' : ' '}`}
-      onClick={handleClick}
-    >
+    <Box sx={styles.item} className={`${active === true ? 'active' : ' '}`} onClick={handleClick}>
       <Heading as="h3">
         <span>0{index + 1}.</span>
         {title}
@@ -81,13 +71,7 @@ const FaqTwo = () => {
         </Box>
         <Box>
           {posts.map(({ title, text, status }, index) => (
-            <FaqItem
-              key={`faq-key-${index}`}
-              title={title}
-              text={text}
-              index={index}
-              status={status}
-            />
+            <FaqItem key={`faq-key-${index}`} title={title} text={text} index={index} status={status} />
           ))}
         </Box>
         <Box sx={styles.buttonWrap}>
@@ -120,7 +104,7 @@ const styles = {
     mb: ['0', null, null, null, '40px'],
     textAlign: 'center',
     p: {
-      color: '#00A99D',
+      color: '#DD4985',
       fontSize: '16px',
     },
     h3: {
