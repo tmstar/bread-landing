@@ -5,40 +5,36 @@ import image from 'assets/faq-one-1.png';
 const FAQ_ONE_DATA = {
   sectionImage: image,
   tagline: 'Website content builder',
-  title: 'Meet our premium features that will make you wow',
-  text:
-    'Build an incredible workplace and grow your business with Gusto’s all-in-one platform with amazing contents.',
+  title: 'いますぐ買い物リストを家族や仲間と共有しよう',
+  text: 'たくさんあるショッピングサイトの欲しいものリストや、頭の中の買いたいものリストを一か所で管理したいと思ったことはありませんか？Breadならそれができます！',
   faqs: [
     {
       isExpanded: true,
-      title: 'Organize your project content',
+      title: '複数のお買い物リストを管理',
       contents: (
         <div>
-          Get your website ads tests delivered at let collect sample from the
-          victory of the managments that supplies best design system which
-          guidelines ever with multiple features.
+          Breadでは、お店や商品の種類、イベントごとに無制限にリストを作成できます。
+          ドラッグストア、スーパー、BBQの買い出しなど、さまざまな目的でリストをつくって、必要がなくなったら簡単に削除できます。
         </div>
       ),
     },
     {
       isExpanded: false,
-      title: 'Collaborate your multiple team support easily',
+      title: 'タグづけ',
       contents: (
         <div>
-          Get your website ads tests delivered at let collect sample from the
-          victory of the managments that supplies best design system which
-          guidelines ever with multiple features.
+          Breadは、リストにタグづけしたり、アイテムに色づけしたりすることで、わかりやすく分類できます。
+          パートナーのメールアドレスをタグとして入力すれば、リストを共有できるので、買い物を依頼することもできます。
         </div>
       ),
     },
     {
       isExpanded: false,
-      title: "Build your team's knowledge base system",
+      title: 'お買い物リスト表示',
       contents: (
         <div>
-          Get your website ads tests delivered at let collect sample from the
-          victory of the managments that supplies best design system which
-          guidelines ever with multiple features.
+          買い物中は閲覧モードにしておくことで、買い物中にリストを誤操作せずにつかえます。
+          リスト作成時はアイテムにメモや色づけをして、見た目をきれいに整理できます。
         </div>
       ),
     },
@@ -49,12 +45,7 @@ const FaqOne = () => {
   return (
     <Box as="section" sx={styles.section}>
       <Box sx={styles.sectionImage}>
-        <Image
-          src={sectionImage}
-          width="1011"
-          height="830"
-          alt="sectionImage"
-        />
+        <Image src={sectionImage} width="1011" height="830" alt="sectionImage" />
       </Box>
       <Container sx={styles.container}>
         <Flex sx={styles.flex}>

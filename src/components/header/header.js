@@ -32,16 +32,8 @@ export default function Header({ className }) {
               </ScrollLink>
             ))}
           </Flex>
-          <Link path="/" sx={styles.loginBtn}>
-            <Image src={lock} alt="" />
-            Login
-          </Link>
-          <Link
-            path="/"
-            label="Purchase Now"
-            sx={styles.headerBtn}
-            variant="buttons.primary"
-          />
+          <Link path="/" sx={styles.loginBtn}></Link>
+          <Link path="/" label="登録" sx={styles.headerBtn} variant="buttons.primary" />
 
           <MobileDrawer />
         </Container>
@@ -52,7 +44,7 @@ export default function Header({ className }) {
 
 const styles = {
   headerBtn: {
-    backgroundColor: '#3CC68A',
+    backgroundColor: '#FF7171',
     fontSize: '16px',
     fontWeight: 'bold',
     letterSpacing: '-0.16px',

@@ -31,11 +31,11 @@ export default function IndexPage() {
         <Features />
         <FaqOne />
         <ProductFeature />
-        <Services />
+        {/* <Services /> */}
         <Pricing />
-        <CustomerSupport />
-        <Video />
-        <FaqTwo />
+        {/* <CustomerSupport /> */}
+        {/* <Video /> */}
+        {/* <FaqTwo /> */}
       </Layout>
     </StickyProvider>
   );

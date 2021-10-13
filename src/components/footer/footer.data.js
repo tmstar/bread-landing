@@ -1,30 +1,5 @@
 export default [
   {
-    header: 'Company',
-    items: [
-      {
-        path: '/',
-        label: 'About',
-      },
-      {
-        path: '/',
-        label: 'Affiliate',
-      },
-      {
-        path: '/',
-        label: 'Careers & Culture    ',
-      },
-      {
-        path: '/',
-        label: 'Blog',
-      },
-      {
-        path: '/',
-        label: 'Press',
-      },
-    ],
-  },
-  {
     header: 'About Us',
     items: [
       {
@@ -42,10 +17,6 @@ export default [
       {
         path: '/',
         label: 'Copyright',
-      },
-      {
-        path: '/',
-        label: 'Popular Campaign',
       },
     ],
   },
@@ -67,35 +38,6 @@ export default [
       {
         path: '/',
         label: 'Site Map',
-      },
-      {
-        path: '/',
-        label: 'Store Hours',
-      },
-    ],
-  },
-  {
-    header: 'My Account',
-    items: [
-      {
-        path: '/',
-        label: 'Press inquiries',
-      },
-      {
-        path: '/',
-        label: 'Social media ',
-      },
-      {
-        path: '/',
-        label: 'directories',
-      },
-      {
-        path: '/',
-        label: 'Images & B-roll',
-      },
-      {
-        path: '/',
-        label: 'Permissions',
       },
     ],
   },

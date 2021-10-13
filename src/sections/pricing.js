@@ -1,114 +1,79 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Container } from 'theme-ui';
-import Slider from 'react-slick';
-import SectionHeading from 'components/section-heading';
-import PriceTable from 'components/price-table';
-import SlickArrow from 'components/slick-arrow';
+import { jsx, Box, Container } from "theme-ui";
+import Slider from "react-slick";
+import SectionHeading from "components/section-heading";
+import PriceTable from "components/price-table";
+import SlickArrow from "components/slick-arrow";
 
 const data = [
   {
     id: 1,
-    title: 'Startup Pack',
-    subtitle: 'For the startup team who work with new come data stack',
-    price: 25.99,
-    isRecommended: false,
-    buttonText: 'Start Free Trial',
+    title: "Free Plan",
+    subtitle: "個人用途や商用利用もOK。ずっと無料でつかえます。",
+    price: 0.0,
+    isRecommended: true,
+    buttonText: "無料で開始",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: "目的ごとにリストを分けて作成",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `自由にタグをつけてリストを分類`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `メールアドレスを使って他のユーザと共有`,
       },
       {
         id: 4,
         isAvailable: false,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `色やフォントの変更`,
       },
       {
         id: 5,
         isAvailable: false,
-        title: `Download and print courses and exercises in PDF`,
+        title: `ログインしていないユーザへリストを外部公開`,
       },
     ],
   },
   {
     id: 2,
-    title: 'Premium Pack',
-    subtitle: 'For the organization who work with new come data stack',
-    price: 29.99,
-    isRecommended: true,
-    buttonText: 'Start Free Trial',
-    features: [
-      {
-        id: 1,
-        isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
-      },
-      {
-        id: 2,
-        isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
-      },
-      {
-        id: 3,
-        isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
-      },
-      {
-        id: 4,
-        isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
-      },
-      {
-        id: 5,
-        isAvailable: true,
-        title: `Download and print courses and exercises in PDF`,
-      },
-    ],
-  },
-  {
-    id: 3,
-    title: 'Ultimate Pack',
-    subtitle: 'For the ultimate company team who work with new come data stack',
-    price: 34.99,
+    title: "Premium Plan (予定)",
+    subtitle: "現在はお使いになれません。",
+    price: 100,
     isRecommended: false,
-    buttonText: 'Start Free Trial',
+    buttonText: "無料で開始",
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: 'Ultimate access to all course, exercises and assessments',
+        title: "目的ごとにリストを分けて作成",
       },
       {
         id: 2,
         isAvailable: true,
-        title: `Free access for all kind of exercise corrections with downloads.`,
+        title: `自由にタグをつけてリストを分類`,
       },
       {
         id: 3,
         isAvailable: true,
-        title: `Total assessment corrections with free download access system`,
+        title: `メールアドレスを使って他のユーザと共有`,
       },
       {
         id: 4,
         isAvailable: true,
-        title: `Unlimited download of courses on the mobile app contents`,
+        title: `色やフォントの変更`,
       },
       {
         id: 5,
         isAvailable: true,
-        title: `Download and print courses and exercises in PDF`,
+        title: `ログインしていないユーザへリストを外部公開`,
       },
     ],
   },
@@ -123,7 +88,7 @@ const settings = {
   responsive: [
     {
       breakpoint: 100000,
-      settings: 'unslick',
+      settings: "unslick",
     },
     {
       breakpoint: 768,
@@ -148,11 +113,7 @@ const Pricing = () => {
   return (
     <Box as="section" id="pricing" sx={styles.section}>
       <Container sx={styles.container}>
-        <SectionHeading
-          sx={styles.heading}
-          slogan="Deal for your business"
-          title="Meet our pricing plan that suit you"
-        />
+        <SectionHeading sx={styles.heading} slogan="Deal for your business" title="すべての機能を無料で提供します" />
         <Slider sx={styles.grid} {...settings}>
           {data?.map((price, index) => (
             <PriceTable price={price} key={index} />
@@ -175,19 +136,19 @@ const styles = {
     pr: 0,
   },
   heading: {
-    mb: ['0px', null, null, '70px'],
+    mb: ["0px", null, null, "70px"],
     px: [6, null, null, 0],
     h3: {},
   },
   grid: {
     gap: [null, null, null, null, 6],
-    display: [null, null, null, null, 'grid'],
-    gridTemplateColumns: [null, null, null, null, 'repeat(3, 1fr)'],
-    alignItems: [null, null, null, null, 'flex-end'],
-    '.slick-slide > div': {
-      p: ['35px', '40px', null, '35px 23px 23px', 0],
+    display: [null, null, null, null, "grid"],
+    gridTemplateColumns: [null, null, null, null, "repeat(2, 1fr)"],
+    alignItems: [null, null, null, null, "flex-end"],
+    ".slick-slide > div": {
+      p: ["35px", "40px", null, "35px 23px 23px", 0],
     },
-    '.slick-arrow': {
+    ".slick-arrow": {
       bottom: -5,
     },
   },

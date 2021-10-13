@@ -7,10 +7,7 @@ import { rgba } from 'polished';
 
 const PriceTable = ({ price }) => {
   return (
-    <Box
-      sx={styles.priceTable}
-      className={`${price.isRecommended ? 'recommended' : ''}`}
-    >
+    <Box sx={styles.priceTable} className={`${price.isRecommended ? 'recommended' : ''}`}>
       {price.isRecommended && (
         <Text as="span" sx={styles.recomLabel}>
           Highly Recommended
@@ -24,8 +21,8 @@ const PriceTable = ({ price }) => {
           {price.subtitle}
         </Text>
         <Text as="p" sx={styles.priceAmount}>
-          ${price?.price}
-          /mo
+          ¥{price?.price}
+          /月
         </Text>
         <Button sx={styles.button} variant="text">
           {price.buttonText}
@@ -58,23 +55,16 @@ const styles = {
     background: 'white',
     borderRadius: 10,
     position: 'relative',
-    padding: [
-      '20px 15px',
-      null,
-      null,
-      '30px 25px',
-      '25px 30px 40px 30px',
-      '45px 60px 70px 45px',
-    ],
+    padding: ['20px 15px', null, null, '30px 25px', '25px 30px 40px 30px', '45px 60px 70px 45px'],
     boxShadow: ['0px 15px 50px rgba(91, 132, 193, 0.1)', null, null, 'none'],
     '&.recommended': {
       boxShadow: [null, null, null, '0px 15px 50px rgba(91, 132, 193, 0.1)'],
       button: {
-        backgroundColor: '#3CC68A',
+        backgroundColor: '#FF7171',
         color: 'white',
         transition: 'all 500ms ease',
         '&:hover': {
-          backgroundColor: 'black',
+          backgroundColor: '#DD4985',
           color: 'white',
         },
       },
@@ -144,8 +134,8 @@ const styles = {
     },
   },
   button: {
-    border: `1.5px solid ${rgba('#3CC68A', 0.15)}`,
-    color: '#3CC68A',
+    border: `1.5px solid ${rgba('#FF7171', 0.15)}`,
+    color: '#FF7171',
     cursor: 'pointer',
     fontWeight: 700,
     minHeight: [40, null, null, null, 50],
@@ -153,7 +143,7 @@ const styles = {
     fontSize: [1, null, null, null, 2],
     mt: [3, null, null, 6],
     ':hover': {
-      borderColor: '#3CC68A',
+      borderColor: '#FF7171',
     },
   },
 };
