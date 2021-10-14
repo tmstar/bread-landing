@@ -1,10 +1,22 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Bread - The #1 App for Shopping List`,
+    description: `Share your shopping list with your family on Bread. ✓Easy to share. ✓Family can check the list immediately. ✓You can tick off the list on the go. Make your list Now!`,
+    author: `Bread Labs`,
+    siteUrl: `https://breadlist.ga`,
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'GA-G-MWZZ51JJV0', // Google Analytics / GA
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
     `gatsby-plugin-theme-ui`,
     `gatsby-plugin-react-helmet`,
     {
@@ -19,13 +31,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Bread`,
+        short_name: `Bread`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#FF7171`,
+        theme_color: `#FF7171`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/bread-icon.png`, // This path is relative to the root of the site.
       },
     },
     {
@@ -72,11 +84,12 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
-        host: 'https://www.example.com',
-        sitemap: 'https://www.example.com/sitemap.xml',
+        host: 'https://breadlist.ga',
+        sitemap: 'https://breadlist.ga/sitemap/sitemap-index.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
+    'gatsby-plugin-sitemap',
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
