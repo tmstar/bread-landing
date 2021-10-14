@@ -12,30 +12,22 @@ import Layout from 'components/layout';
 import Banner from 'sections/banner';
 import Features from 'sections/features';
 import FaqOne from 'sections/faq-one';
-import FaqTwo from 'sections/faq-two';
-import Video from 'sections/video';
 import Pricing from 'sections/pricing';
-import Services from 'sections/services';
 import ProductFeature from 'sections/product-feature';
-import CustomerSupport from 'sections/customer-support';
 
 export default function IndexPage() {
   return (
     <StickyProvider>
       <Layout>
         <SEO
-          title="Startup Landing 019"
-          description="Collection of free top of the line startup landing templates built using react/ next js. Free to download, simply edit and deploy! Updated weekly!"
+          title="Bread - The #1 App for Shopping List"
+          description="Share your shopping list with your family on Bread. ✓Easy to share. ✓Family can check the list immediately. ✓You can tick off the list on the go. Make your list Now!"
         />
         <Banner />
         <Features />
         <FaqOne />
         <ProductFeature />
-        {/* <Services /> */}
         <Pricing />
-        {/* <CustomerSupport /> */}
-        {/* <Video /> */}
-        {/* <FaqTwo /> */}
       </Layout>
     </StickyProvider>
   );
