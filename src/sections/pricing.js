@@ -1,24 +1,24 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Box, Container } from "theme-ui";
-import Slider from "react-slick";
-import SectionHeading from "components/section-heading";
-import PriceTable from "components/price-table";
-import SlickArrow from "components/slick-arrow";
+import { jsx, Box, Container } from 'theme-ui';
+import Slider from 'react-slick';
+import SectionHeading from 'components/section-heading';
+import PriceTable from 'components/price-table';
+import SlickArrow from 'components/slick-arrow';
 
 const data = [
   {
     id: 1,
-    title: "Free Plan",
-    subtitle: "個人用途や商用利用もOK。ずっと無料でつかえます。",
+    title: 'Free Plan',
+    subtitle: '個人用途や商用利用もOK。ずっと無料で使えます。',
     price: 0.0,
     isRecommended: true,
-    buttonText: "無料で開始",
+    buttonText: '無料で開始',
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "目的ごとにリストを分けて作成",
+        title: '目的ごとにリストを分けて作成',
       },
       {
         id: 2,
@@ -44,16 +44,16 @@ const data = [
   },
   {
     id: 2,
-    title: "Premium Plan (予定)",
-    subtitle: "現在はお使いになれません。",
+    title: 'Premium Plan (予定)',
+    subtitle: '現在はお使いになれません。',
     price: 100,
     isRecommended: false,
-    buttonText: "無料で開始",
+    buttonText: '無料で開始',
     features: [
       {
         id: 1,
         isAvailable: true,
-        title: "目的ごとにリストを分けて作成",
+        title: '目的ごとにリストを分けて作成',
       },
       {
         id: 2,
@@ -88,7 +88,7 @@ const settings = {
   responsive: [
     {
       breakpoint: 100000,
-      settings: "unslick",
+      settings: 'unslick',
     },
     {
       breakpoint: 768,
@@ -136,19 +136,19 @@ const styles = {
     pr: 0,
   },
   heading: {
-    mb: ["0px", null, null, "70px"],
+    mb: ['0px', null, null, '70px'],
     px: [6, null, null, 0],
     h3: {},
   },
   grid: {
     gap: [null, null, null, null, 6],
-    display: [null, null, null, null, "grid"],
-    gridTemplateColumns: [null, null, null, null, "repeat(2, 1fr)"],
-    alignItems: [null, null, null, null, "flex-end"],
-    ".slick-slide > div": {
-      p: ["35px", "40px", null, "35px 23px 23px", 0],
+    display: [null, null, null, null, 'grid'],
+    gridTemplateColumns: [null, null, null, null, 'repeat(2, 1fr)'],
+    alignItems: [null, null, null, null, 'flex-end'],
+    '.slick-slide > div': {
+      p: ['35px', '40px', null, '35px 23px 23px', 0],
     },
-    ".slick-arrow": {
+    '.slick-arrow': {
       bottom: -5,
     },
   },
