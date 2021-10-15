@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Button, Box } from 'theme-ui';
+import { Box } from 'theme-ui';
 import { Scrollbars } from 'react-custom-scrollbars';
 import Drawer from 'components/drawer';
 import { DrawerContext } from 'contexts/drawer/drawer.context';
@@ -37,24 +37,16 @@ const MobileDrawer = () => {
           <Logo />
           <Box sx={styles.menu}>
             {menuItems.map(({ path, label }, i) => (
-              <ScrollLink
-                activeClass="active"
-                to={path}
-                spy={true}
-                smooth={true}
-                offset={10}
-                duration={500}
-                key={i}
-              >
+              <ScrollLink activeClass="active" to={path} spy={true} smooth={true} offset={10} duration={500} key={i}>
                 {label}
               </ScrollLink>
             ))}
           </Box>
 
           <Box sx={styles.menuFooter}>
-            <Button variant="primary" sx={styles.button}>
+            {/* <Button variant="primary" sx={styles.button}>
               Purchase Now
-            </Button>
+            </Button> */}
           </Box>
         </Box>
       </Scrollbars>

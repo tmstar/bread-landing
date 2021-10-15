@@ -1,11 +1,11 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Container, Flex, Image } from 'theme-ui';
-import { Link } from 'components/link';
+import { jsx, Container, Flex, Button } from 'theme-ui';
+import { Link, ExternalLink } from 'components/link';
 import { Link as ScrollLink } from 'react-scroll';
 import Logo from 'components/logo';
 import { DrawerProvider } from 'contexts/drawer/drawer.provider';
-import lock from 'assets/lock.svg';
+// import lock from 'assets/lock.svg';
 import MobileDrawer from './mobileDrawer';
 import menuItems from './header.data';
 
@@ -33,7 +33,11 @@ export default function Header({ className }) {
             ))}
           </Flex>
           <Link path="/" sx={styles.loginBtn}></Link>
-          <Link path="/" label="登録" sx={styles.headerBtn} variant="buttons.primary" />
+          <ExternalLink path="https://app.breadlist.ga">
+            <Button sx={styles.headerBtn} variant="text">
+              登録
+            </Button>
+          </ExternalLink>
 
           <MobileDrawer />
         </Container>

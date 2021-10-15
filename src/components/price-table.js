@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Button, Heading, Text } from 'theme-ui';
+import { ExternalLink } from 'components/link';
 import { IoMdCheckmarkCircle } from 'react-icons/io';
 import { IoIosCloseCircle } from 'react-icons/io';
 import { rgba } from 'polished';
@@ -24,9 +25,11 @@ const PriceTable = ({ price }) => {
           ¥{price?.price}
           /月
         </Text>
-        <Button sx={styles.button} variant="text">
-          {price.buttonText}
-        </Button>
+        <ExternalLink path="https://app.breadlist.ga">
+          <Button sx={styles.button} variant="text">
+            {price.buttonText}
+          </Button>
+        </ExternalLink>
       </Box>
       <Box as="ul" sx={styles.list}>
         {price?.features?.map((feat) => (
