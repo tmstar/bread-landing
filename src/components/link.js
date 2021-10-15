@@ -16,3 +16,10 @@ export function Link({ path, label, children, ...rest }) {
     </A>
   );
 }
+export function ExternalLink({ path, label, children, ...rest }) {
+  return (
+    <a href={path} target="_blank" rel="noopener noreferrer" {...rest}>
+      {children ? children : label}
+    </a>
+  );
+}

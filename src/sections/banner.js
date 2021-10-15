@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Container, Flex, Heading, Text, Image, Label, Input, Button, Link } from 'theme-ui';
-
+import { Box, Container, Flex, Heading, Text, Image, Button } from 'theme-ui';
+import { ExternalLink } from 'components/link';
 import sectionImage from 'assets/banner-1.svg';
 
 const BANNER_DATA = {
@@ -15,7 +15,7 @@ const BANNER_DATA = {
   image: sectionImage,
 };
 const Banner = () => {
-  const { title, text, clients, image } = BANNER_DATA;
+  const { title, text, image } = BANNER_DATA;
   return (
     <Box as="section" id="banner" sx={styles.section}>
       <Container sx={styles.container}>
@@ -23,8 +23,10 @@ const Banner = () => {
           <Box sx={styles.content}>
             <Heading as="h2">{title}</Heading>
             <Text as="p">{text}</Text>
-            <Box as="form">
-              <Button>Breadに登録する</Button>
+            <Box as="div">
+              <ExternalLink path="https://app.breadlist.ga">
+                <Button variant="text">Breadに登録する</Button>
+              </ExternalLink>
             </Box>
             {/* <Box sx={styles.clients}>
               <Text as="span">Our clients</Text>
@@ -80,7 +82,7 @@ const styles = {
       color: '#02073E',
       maxWidth: '486px',
     },
-    form: {
+    div: {
       display: 'flex',
       flexWrap: 'wrap',
       justifyContent: [null, null, null, 'center', 'flex-start'],
@@ -123,6 +125,7 @@ const styles = {
         cursor: 'pointer',
         mx: ['auto', 0],
         transition: 'all 500ms ease',
+        backgroundColor: 'primary',
         '&:hover': {
           backgroundColor: 'secondary',
         },
