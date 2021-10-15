@@ -1,9 +1,9 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import { jsx, Heading, Box, Text, Container } from 'theme-ui';
+import { jsx, Box, Text, Container } from 'theme-ui';
 import { Link } from 'components/link';
 import Logo from 'components/logo';
-import menuItems from './footer.data';
+// import menuItems from './footer.data';
 export default function Footer() {
   return (
     <footer
