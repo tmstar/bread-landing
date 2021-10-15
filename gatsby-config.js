@@ -85,7 +85,7 @@ module.exports = {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
         host: 'https://breadlist.ga',
-        sitemap: 'https://breadlist.ga/sitemap/sitemap-index.xml',
+        sitemap: 'https://breadlist.ga/sitemap.xml',
         policy: [{ userAgent: '*', allow: '/' }],
       },
     },
