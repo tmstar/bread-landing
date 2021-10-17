@@ -1,7 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
 import { jsx, Box, Text, Container } from 'theme-ui';
-import { Link } from 'components/link';
+import { Link, NavLink } from 'components/link';
 import Logo from 'components/logo';
 // import menuItems from './footer.data';
 export default function Footer() {
@@ -54,7 +54,7 @@ export default function Footer() {
         <Box sx={styles.bottomMenu}>
           <Link path="/" label="Home" />
           <Link path="/" label="Terms" />
-          <Link path="/" label="Privacy" />
+          <NavLink path="/privacy-policy" label="Privacy" />
           <Link path="/" label="FAQ" />
         </Box>
       </Container>
@@ -97,6 +97,7 @@ const styles = {
     a: {
       color: '#02073E',
       fontSize: '15px',
+      fontWeight: 'normal',
       '+a': {
         ml: ['10px', '30px'],
       },
