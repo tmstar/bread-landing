@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Container, Heading, Text } from 'theme-ui';
+import { Box, Container } from 'theme-ui';
 
 const PrivacyPolicy = () => {
   return (
